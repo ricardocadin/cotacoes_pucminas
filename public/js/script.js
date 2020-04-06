@@ -22,6 +22,7 @@ cotacoesForm.addEventListener('submit', (event) => {
         return;
     }
     
+    // no caso do projeto publicado remover a parte http://localhost:3000 e deixar somente o /cotacoes...
     fetch(`http://localhost:3000/cotacoes?ativo=${ativo}`).then((response) => {
         response.json().then((data) => {
             if(data.error){

@@ -83,6 +83,13 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log("Servidor escutando na porta 3000")
+//publicar no horoku, criar conta, baixar o cli e subir o projeto
+//horoku keys:add
+//Yes
+//horoku create cotacoes-cursonodejs
+//git push heroku master 
+const port = process.env.PORT || 3000
+
+app.listen(port, () => {
+    console.log(`Servidor escutando na porta ${port}`)
 })
